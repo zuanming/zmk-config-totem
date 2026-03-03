@@ -1,3 +1,14 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: zuanming
+      url-base: https://github.com/zuanming
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
+
   projects:
     - name: zmk
       remote: zmkfirmware
