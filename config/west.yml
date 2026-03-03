@@ -1,11 +1,25 @@
-manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
+    - name: nice-view-battery                
+      remote: zuanming                       
+      revision: main   
+    - name: zmk-oled-adapter
+      remote: zuanming
+      revision: main
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
+    # - name: zmk-dongle
+    #   remote: zuanming
+    #   revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
+    - name: zmk-config
+      remote: zuanming
+      revision: main
   self:
     path: config
