@@ -6,6 +6,13 @@
 
 #include "totem.dtsi"
 / {
+
+    chosen {
+        zephyr,display = &oled;
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &totem_layout;
+    };
+
     mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
