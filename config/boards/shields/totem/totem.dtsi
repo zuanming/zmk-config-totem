@@ -32,7 +32,7 @@
         >;
     };
 
-
+/*
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
        
@@ -43,7 +43,7 @@
             , <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-
+*/
     
 };
 
