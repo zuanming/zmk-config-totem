@@ -13,17 +13,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        submodules: recursive  # Gets ZMK + modules
     
-    - name: Initialize ZMK
-      uses: zmkfirmware/zmk-tools@v1
+    - name: Setup ZMK
+      run: |
+        # Install west
+        pip3 install west
+        west init -l config
+        
+    - name: Build Left Central
+      run: west build -s zmk/app -b seeeduino_xiao_ble -d build_left_central -- -DSHIELD=totem_left -DZMK_CONFIG=./config
       
-    - name: Build Left
-      run: west build -s zmk/app -b seeeduino_xiao_ble -d build_left -- -DSHIELD=totem_left_peripheral -DZMK_CONFIG=./config
+    - name: Build Left Peripheral  
+      run: west build -s zmk/app -b seeeduino_xiao_ble -d build_left_peripheral -- -DSHIELD=totem_left_peripheral -DZMK_CONFIG=./config
       
     - name: Build Right
       run: west build -s zmk/app -b seeeduino_xiao_ble -d build_right -- -DSHIELD=totem_right -DZMK_CONFIG=./config
       
-    - name: Build Dongle  
+    - name: Build Dongle
       run: west build -s zmk/app -b nice_nano_v2 -d build_dongle -S studio-rpc-usb-uart -- -DSHIELD="totem_dongle dongle_display" -DZMK_CONFIG=./config
       
     - name: Upload Artifacts
@@ -31,6 +39,8 @@ jobs:
       with:
         name: totem-firmware
         path: |
-          build_left/zephyr/zephyr.*
+          build_left_central/zephyr/zephyr.*
+          build_left_peripheral/zephyr/zephyr.*
           build_right/zephyr/zephyr.*
           build_dongle/zephyr/zephyr.*
+
