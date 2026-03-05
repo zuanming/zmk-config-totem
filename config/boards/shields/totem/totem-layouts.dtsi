@@ -1,4 +1,4 @@
-
+#include <physical_layouts.dtsi>
 
 / {
 totem_layout: totem_layout{
