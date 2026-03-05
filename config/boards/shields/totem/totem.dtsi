@@ -46,53 +46,45 @@
         compatible = "zmk,physical-layout";
         display-name = "TOTEM Keyboard Layout";
         transform = <&default_transform>;
-        keys
-            // Row 0: Q W E R T | Y U I O P
-            = <&key_physical_attrs 100 100   266   480   0   0   0>  // Q
-            , <&key_physical_attrs 100 100   387   387   0   0   0>  // W
-            , <&key_physical_attrs 100 100   512   326   0   0   0>  // E
-            , <&key_physical_attrs 100 100   620   375   0   0   0>  // R
-            , <&key_physical_attrs 100 100   728   392   0   0   0>  // T
-            , <&key_physical_attrs 100 100  1073   392   0   0   0>  // Y (using P's coord)
-            , <&key_physical_attrs 100 100  1181   375   0   0   0>  // U (using O's coord)
-            , <&key_physical_attrs 100 100  1289   326   0   0   0>  // I (stays)
-            , <&key_physical_attrs 100 100  1412   387   0   0   0>  // O (using U's coord)
-            , <&key_physical_attrs 100 100  1533   480   0   0   0>  // P (using Y's coord)
-            
-            // Row 1: A S D F G | H J K L ;
-            , <&key_physical_attrs 100 100   284   581   0   0   0>  // A
-            , <&key_physical_attrs 100 100   395   489   0   0   0>  // S
-            , <&key_physical_attrs 100 100   512   428   0   0   0>  // D
-            , <&key_physical_attrs 100 100   620   477   0   0   0>  // F
-            , <&key_physical_attrs 100 100   728   494   0   0   0>  // G
-            , <&key_physical_attrs 100 100  1073   495   0   0   0>  // H (using ;'s coord)
-            , <&key_physical_attrs 100 100  1181   477   0   0   0>  // J (using L's coord)
-            , <&key_physical_attrs 100 100  1289   428   0   0   0>  // K (stays)
-            , <&key_physical_attrs 100 100  1404   489   0   0   0>  // L (using J's coord)
-            , <&key_physical_attrs 100 100  1515   581   0   0   0>  // ; (using H's coord)
-            
-            // Row 2: [ Z X C V B | N M , . / ]
-            , <&key_physical_attrs 100 100   188   654   0   0   0>  // [
-            , <&key_physical_attrs 100 100   302   681   0   0   0>  // Z
-            , <&key_physical_attrs 100 100   402   590   0   0   0>  // X
-            , <&key_physical_attrs 100 100   512   530   0   0   0>  // C
-            , <&key_physical_attrs 100 100   620   579   0   0   0>  // V
-            , <&key_physical_attrs 100 100   728   596   0   0   0>  // B
-            , <&key_physical_attrs 100 100  1073   597   0   0   0>  // N (using ]'s coord)
-            , <&key_physical_attrs 100 100  1181   579   0   0   0>  // M (using /'s coord)
-            , <&key_physical_attrs 100 100  1289   530   0   0   0>  // , (using .'s coord)
-            , <&key_physical_attrs 100 100  1398   590   0   0   0>  // . (using ,'s coord)
-            , <&key_physical_attrs 100 100  1499   681   0   0   0>  // / (using M's coord)
-            , <&key_physical_attrs 100 100  1613   654   0   0   0>  // ] (using N's coord)
-            
-            // Row 3: ESC BSPC TAB | ENT SPC LSHFT
-            , <&key_physical_attrs 100 100   588   704   0   0   0>  // ESC
-            , <&key_physical_attrs 100 100   708   720   0   0   0>  // BSPC
-            , <&key_physical_attrs 100 100   819   767   0   0   0>  // TAB
-            , <&key_physical_attrs 100 100   981   767   0   0   0>  // ENT (using LSHFT's coord)
-            , <&key_physical_attrs 100 100  1092   720   0   0   0>  // SPC (stays)
-            , <&key_physical_attrs 100 100  1211   704   0   0   0>  // LSHFT (using ENT's coord)
-            ;
+    = <&key_physical_attrs 100 100   70  136 (-1000)   120   186>
+    , <&key_physical_attrs 100 100  176   54  (-400)   226   104>
+    , <&key_physical_attrs 100 100  284    0       0     0     0>
+    , <&key_physical_attrs 100 100  379   44       0     0     0>
+    , <&key_physical_attrs 100 100  474   59       0     0     0>
+    , <&key_physical_attrs 100 100  873   59       0     0     0>
+    , <&key_physical_attrs 100 100  968   44       0     0     0>
+    , <&key_physical_attrs 100 100 1062    0       0     0     0>
+    , <&key_physical_attrs 100 100 1171   54     400  1221   104>
+    , <&key_physical_attrs 100 100 1277  136    1000  1327   186>
+    , <&key_physical_attrs 100 100   85  224 (-1000)   135   274>
+    , <&key_physical_attrs 100 100  182  143  (-400)   232   193>
+    , <&key_physical_attrs 100 100  284   90       0     0     0>
+    , <&key_physical_attrs 100 100  379  134       0     0     0>
+    , <&key_physical_attrs 100 100  474  148       0     0     0>
+    , <&key_physical_attrs 100 100  873  148       0     0     0>
+    , <&key_physical_attrs 100 100  968  134       0     0     0>
+    , <&key_physical_attrs 100 100 1062   90       0     0     0>
+    , <&key_physical_attrs 100 100 1165  143     400  1215   193>
+    , <&key_physical_attrs 100 100 1261  224    1000  1311   274>
+    , <&key_physical_attrs 100 100    0  289 (-1000)    50   339>
+    , <&key_physical_attrs 100 100  101  312 (-1000)   151   362>
+    , <&key_physical_attrs 100 100  188  233  (-400)   238   283>
+    , <&key_physical_attrs 100 100  284  179       0     0     0>
+    , <&key_physical_attrs 100 100  379  223       0     0     0>
+    , <&key_physical_attrs 100 100  474  238       0     0     0>
+    , <&key_physical_attrs 100 100  873  238       0     0     0>
+    , <&key_physical_attrs 100 100  968  223       0     0     0>
+    , <&key_physical_attrs 100 100 1062  179       0     0     0>
+    , <&key_physical_attrs 100 100 1158  233     400  1208   283>
+    , <&key_physical_attrs 100 100 1246  312    1000  1296   362>
+    , <&key_physical_attrs 100 100 1346  289    1000  1396   339>
+    , <&key_physical_attrs 100 100  352  332       0     0     0>
+    , <&key_physical_attrs 100 100  457  347    1500   507   397>
+    , <&key_physical_attrs 100 100  554  387    3000   604   437>
+    , <&key_physical_attrs 100 100  792  387 (-3000)   842   437>
+    , <&key_physical_attrs 100 100  889  347 (-1500)   939   397>
+    , <&key_physical_attrs 100 100  994  332       0     0     0>
+    ;
     };
     
 };
