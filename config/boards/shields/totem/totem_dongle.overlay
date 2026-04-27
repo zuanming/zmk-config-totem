@@ -77,7 +77,7 @@
     display-offset = <0>;
     multiplex-ratio = <63>;
     segment-remap;    // horizontal flip (as before)
-    com-invdir;       // vertical flip
+//    com-invdir;       // vertical flip
     inversion-on;     // pixel color inversion (black/white swap)
     prechargep = <0x22>;
     };
