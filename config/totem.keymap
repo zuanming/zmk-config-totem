@@ -59,6 +59,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+            quick-tap-ms = <200>;
         };
     };
 
@@ -70,10 +71,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-       &kp Q       &kp W       &kp F        &kp P        &kp G        &kp J        &kp L            &kp U        &kp Y       &kp SEMI
-       &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Q  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SEMI
-                               &kp ESCAPE   &lt 2 TAB    &lt 3 SPACE  &lt 4 ENTER  &lt 1 BACKSPACE  &kp DELETE
+            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J        &kp L            &kp U        &kp Y       &kp SEMI
+            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
+&caps_word  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SEMI
+                                    &kp ESCAPE   &lt 2 TAB    &lt 3 SPACE  &lt 4 ENTER  &lt 1 BACKSPACE  &kp DELETE
             >;
         };
 
